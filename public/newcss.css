@@ -1,0 +1,138 @@
+*,
+*::before,body
+*::after {
+  box-sizing: border-box;
+}
+p:not([class]) {
+  text-align: left;
+  margin-bottom: 10px;
+}
+ul[class],
+ol[class] {
+  padding: 0;
+  text-align: left;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  text-align: left;
+  margin: 0;
+}
+ul,
+ol,
+li {
+  text-align: left;
+  padding: 0;
+}
+
+body {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  font-family: "Karla", sans-serif;
+
+
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  font-optical-sizing: auto;
+  line-height: 1.5;
+
+
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.mte-container {
+    background: url('./images/avokato.png') no-repeat center center/cover; /* Update this path */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mte-header {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    text-align: center;
+}
+
+.mte-header-title {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.mte-nav {
+    background-color: #ffb400;
+}
+
+.mte-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.mte-menu-item {
+    margin: 0 15px;
+}
+
+.mte-menu-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.mte-info {
+    background-color: #31c4d3;
+    text-align: center;
+    padding: 20px;
+}
+
+.mte-info-text {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.mte-info-strong {
+    font-weight: bold;
+}
