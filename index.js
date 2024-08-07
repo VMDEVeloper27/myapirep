@@ -4,7 +4,6 @@ const axios = require("axios");
 const cors = require("cors");
 const path = require("path");
 const morgan = require("morgan"); // Мидлвэр для логгирования HTTP-запросов
-
 const app = express();
 
 
