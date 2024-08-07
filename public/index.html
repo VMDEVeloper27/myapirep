@@ -513,31 +513,32 @@
         display: none;
       }
     </style>
-     <script>
+    <script>
       document.querySelectorAll('.telegramLink').forEach(link => {
-             link.addEventListener('click', function(event) {
-                // Предотвращаем переход по ссылке
- 
-                 fetch('http://access1016735631.webspace-data.io/send-message', {
-                     method: 'POST',
-                     headers: {
-                         'Content-Type': 'application/json',
-                     },
-                     body: JSON.stringify({ message: 'По ссылке перешли' }),
-                 })
-                 .then(response => {
-                     if (response.ok) {
-                         console.log('Message sent');
-                     } else {
-                         console.error('Failed to send message');
-                     }
-                 })
-                 .catch(error => {
-                     console.error('Error:', error);
-                 });
-             });
-         });
-     </script>
+          link.addEventListener('click', function(event) {
+              // Предотвращаем переход по ссылке
+              event.preventDefault();
+
+              fetch('https://myapirep-h8pf.vercel.app/send-message', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({ message: 'По ссылке перешли' }),
+              })
+              .then(response => {
+                  if (response.ok) {
+                      console.log('Message sent');
+                  } else {
+                      console.error('Failed to send message:', response.statusText);
+                  }
+              })
+              .catch(error => {
+                  console.error('Error:', error);
+              });
+          });
+      });
+  </script>
     <script type="module">
       import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
